@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Nav -->
+      <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand mx-auto" href="#"
+            ><img src="./images/logo.png" alt=""
+          /></a>
+        </div>
+      </nav>
+      <!-- End Nav -->
+      <div class="row">
+        <!-- salary input details -->
+        <div class="col-sm-12 col-md-6 my-2 salary-details">
+          <div class="col-sm-12 col-md-8 p-0 m-0 inner-salary-details">
+            <h4 class="fw-bolder">SALARY DETAILS</h4>
+            <p class="fw-bold">PAY PERIOD</p>
+            <form action="#" method="post">
+              <div style="width: 30%" class="d-flex justify-content-between">
+                <div>
+                  <input type="radio" name="period" id="month" checked />
+                  <label for="month">MONTH</label>
+                </div>
+                <div>
+                  <input type="radio" name="period" id="year" />
+                  <label for="year">YEAR</label>
+                </div>
+              </div>
+              <p class="mt-3 mb-1 fw-bold">BASIC SALARY (KSH):</p>
+              <!-- <input class="" type="number" name="salary" id="salary" /> -->
+              <input
+                class="form-control input colored"
+                id="salary"
+                type="number"
+                placeholder="0"
+              />
+              <p class="mt-3 mb-0 fw-bold">BENEFITS(BONUS, ALLOWANCE) (KSH)</p>
+              <input
+                class="form-control input colored"
+                type="number"
+                placeholder="0"
+              />
+              <p class="mt-3 mb-1 fw-bold">DEDUCT NSSF</p>
+              <div style="width: 30%" class="d-flex justify-content-between">
+                <div>
+                  <input type="radio" name="nssf" id="nssf" checked />
+                  <label for="nssf">YES</label>
+                </div>
+                <div>
+                  <input type="radio" name="nssf" id="no-nssf" />
+                  <label for="no-nssf">NO</label>
+                </div>
+              </div>
+              <p class="mt-3 mb-1 fw-bold">NSSF RATES</p>
+              <div class="">
+                <div>
+                  <input type="radio" name="isnew-nssf" id="new-nssf" checked />
+                  <label for="new-nssf">NEW NSSF RATES</label>
+                </div>
+                <div>
+                  <input type="radio" name="isnew-nssf" id="old-nssf" />
+                  <label for="old-nssf">OLD NSSF RATES (KSH 200)</label>
+                </div>
+              </div>
+              <button class="btn btn-primary fw-bold colored">CALCULATE</button>
+            </form>
+          </div>
+        </div>
+        <!-- computation results -->
+        <div class="col-sm-12 col-md-6 my-2 p-0">
+          <div class="results border rounded-top">
+            <div
+              style="background: #ebbd77"
+              class="view-panel m-0 p-0 rounded-top"
+            >
+              <p class="text-center fw-bold p-3 fs-4">NET PAY:</p>
+              <p class="text-center fw-bolder pb-4 fs-3">KSH. 0.00</p>
+            </div>
+            <div class="details px-4">
+              <table class="table table-borderless table-hover">
+                <tbody>
+                  <tr>
+                    <td class="fw-bold">GROSS PAY</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">NSSF CONTRIBUTION</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">TAXABLE INCOME</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">PERSONAL RELIEF</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">INSURANCE/ NHIF RELIEF</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">P.A.Y.E</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">NHFI CONTRIBUTION</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">NET PAY</td>
+                    <td class="fw-bold">KSH 0.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
